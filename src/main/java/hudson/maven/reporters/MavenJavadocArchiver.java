@@ -43,8 +43,8 @@ public class MavenJavadocArchiver extends AbstractMavenJavadocArchiver {
 
 
     public Collection<? extends Action> getProjectActions(MavenModule project) {
-        return Collections.singletonList(new MavenJavadocAction(project,getTarget(),"Javadoc","javadoc"
-                ,hudson.tasks.Messages.JavadocArchiver_DisplayName_Javadoc()));
+        return Collections.singletonList(new MavenJavadocAction(project, getTarget(project), "Javadoc","javadoc"
+                ,"Javadoc"));
     }
 
     @Override
@@ -53,8 +53,8 @@ public class MavenJavadocArchiver extends AbstractMavenJavadocArchiver {
     }
 
     public Action getAggregatedProjectAction(MavenModuleSet project) {
-        return new MavenJavadocAction(project,getTarget(),"Javadoc","javadoc"
-                ,hudson.tasks.Messages.JavadocArchiver_DisplayName_Javadoc());
+        return new MavenJavadocAction(project, getTarget(project), "Javadoc","javadoc"
+                ,"Javadoc");
     }
 
     @Override
